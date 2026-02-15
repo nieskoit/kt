@@ -1,0 +1,180 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/montserrat-bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('fonts/OpenSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+}
+
+:root {
+    --primary-green: #76c043;
+    --dark-green: #4a7c2c;
+    --dirt-brown: #5d3d21;
+    --bg-dark: #121212;
+    --card-bg: #1e1e1e;
+    --text-light: #f5f5f5;
+    --discord-blurple: #5865F2;
+    --discord-hover: #4752c4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+    padding-bottom: 50px;
+}
+
+header {
+    background: linear-gradient(135deg, var(--dark-green) 0%, var(--bg-dark) 100%);
+    padding: 80px 20px;
+    text-align: center;
+    border-bottom: 6px solid var(--primary-green);
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2.2rem, 7vw, 4.5rem);
+    color: var(--primary-green);
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+header p {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    opacity: 0.8;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 35px;
+    margin-bottom: 25px;
+    border-left: 4px solid var(--dirt-brown);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, border-left-color 0.3s ease;
+}
+
+.section-card:hover {
+    transform: translateY(-5px);
+    border-left-color: var(--primary-green);
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-green);
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+h2::before {
+    content: "§";
+    margin-right: 15px;
+    color: var(--dirt-brown);
+    font-size: 1.8rem;
+}
+
+ul { list-style: none; }
+
+li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    color: #ccc;
+}
+
+li::before {
+    content: "•";
+    color: var(--primary-green);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.highlight {
+    color: white;
+    font-weight: 600;
+}
+
+.discord-box {
+    background: #23272a; /* Oficjalny ciemny kolor Discorda */
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    margin-top: 60px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.discord-box h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.btn-discord {
+    display: inline-block;
+    background-color: var(--discord-blurple);
+    color: #ffffff;
+    padding: 16px 36px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-top: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-discord:hover {
+    background-color: var(--discord-hover);
+    transform: scale(1.02);
+}
+
+footer {
+    text-align: center;
+    margin-top: 80px;
+    color: #444;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+    header { padding: 60px 20px; }
+    .section-card { padding: 25px; }
+    h1 { font-size: 2.2rem; }
+}
