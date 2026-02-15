@@ -19,6 +19,10 @@
     font-display: swap;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --primary-green: #76c043;
     --dark-green: #4a7c2c;
@@ -177,4 +181,17 @@ footer {
     header { padding: 60px 20px; }
     .section-card { padding: 25px; }
     h1 { font-size: 2.2rem; }
+}
+ol {
+    list-style: decimal inside; 
+    color: #ccc;
+}
+
+ol li {
+    margin-bottom: 12px;
+    padding-left: 0; 
+}
+
+ol li::before {
+    content: none; 
 }
