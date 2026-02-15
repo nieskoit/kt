@@ -1,2 +1,2 @@
-# Official Resource Pack for "Kraina Twórców"
-You can download here if you want lol
+# Official page for "Kraina Twórców"
+idk what are u doing here
